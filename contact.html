@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Job Gator | Contact Us</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top p-2">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="images/asset 0.png" alt="Logo" height="50" class="ms-2 my-2 img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="job.html">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="career.html">Career Advice</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="register.html">Sign Up</a></li>
+          </ul>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background-color:#F2F6FF;">
+      <div class="container text-center">
+        <h1 class="fw-bold">Contact Us</h1>
+        <p class="fs-5">Get in touch with our team</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Form -->
+          <div class="col-md-8">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <h3 class="mb-4" style="color:#F03737;">Send us a Message</h3>
+                <form id="contactForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Full Name *</label>
+                      <input type="text" class="form-control" id="fullName" required>
+                      <div class="invalid-feedback">Please enter your full name.</div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Email Address *</label>
+                      <input type="email" class="form-control" id="email" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Subject *</label>
+                      <select class="form-control" id="subject" required>
+                        <option value="">Select Subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="job-seeker">Job Seeker Support</option>
+                        <option value="employer">Employer Support</option>
+                        <option value="technical">Technical Issue</option>
+                        <option value="feedback">Feedback</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a subject.</div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Message *</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                    <div class="invalid-feedback">Please enter your message.</div>
+                  </div>
+                  <button type="submit" class="btn text-light px-4" style="background-color:#F03737;">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-md-4">
+            <div class="card shadow h-100">
+              <div class="card-body p-4">
+                <h3 class="mb-4" style="color:#F03737;">Get in Touch</h3>
+                
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-envelope fs-4 me-3" style="color:#F03737;"></i>
+                    <div>
+                      <h6 class="mb-0">Email</h6>
+                      <p class="mb-0">info@myjobgator.com</p>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-phone fs-4 me-3" style="color:#F03737;"></i>
+                    <div>
+                      <h6 class="mb-0">Phone</h6>
+                      <p class="mb-0">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-location-dot fs-4 me-3" style="color:#F03737;"></i>
+                    <div>
+                      <h6 class="mb-0">Address</h6>
+                      <p class="mb-0">123 Business Street<br>City, State 12345</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h6 class="mb-3">Follow Us</h6>
+                  <div class="d-flex gap-3">
+                    <a href="#" class="text-decoration-none" style="color:#F03737;"><i class="fa-brands fa-facebook fs-4"></i></a>
+                    <a href="#" class="text-decoration-none" style="color:#F03737;"><i class="fa-brands fa-twitter fs-4"></i></a>
+                    <a href="#" class="text-decoration-none" style="color:#F03737;"><i class="fa-brands fa-linkedin fs-4"></i></a>
+                    <a href="#" class="text-decoration-none" style="color:#F03737;"><i class="fa-brands fa-instagram fs-4"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light mt-5" style="background-color:#212529;">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <h2 class="text-center">Contact <span style="color:#F03737;">Info</span></h2>
+            <hr class="text-light" />
+            <p>DO YOU HAVE A QUESTION?<br /><span class="fs-5">info@myjobgator.com</span></p>
+            <p class="fs-5">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Quick <span style="color:#F03737;">Links</span></h2>
+            <hr class="text-light" />
+            <a href="index.html" class="text-decoration-none text-light d-block mb-2">Home</a>
+            <a href="job.html" class="text-decoration-none text-light d-block mb-2">Jobs</a>
+            <a href="career.html" class="text-decoration-none text-light d-block mb-2">Career</a>
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Our <span style="color:#F03737;">Company</span></h2>
+            <hr class="text-light" />
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+            <a href="privacy.html" class="text-decoration-none text-light d-block mb-2">Privacy Policy</a>
+            <a href="contact.html" class="text-decoration-none text-light d-block mb-2">Contact Us</a>
+            <a href="terms.html" class="text-decoration-none text-light d-block mb-2">Terms & Conditions</a>
+          </div>
+        </div>
+        <hr class="text-light mt-4" />
+        <p class="text-center small mb-0">
+          &copy; 2024 My Job Gator. All rights reserved |
+          <a href="terms.html" class="text-decoration-none text-light">Terms & Conditions</a> |
+          <a href="privacy.html" class="text-decoration-none text-light">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

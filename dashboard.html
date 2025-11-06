@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Job Gator | Dashboard</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top p-2">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="images/asset 0.png" alt="Logo" height="50" class="ms-2 my-2 img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="job.html">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="career.html">Career Advice</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link active ms-lg-3" style="color:#F03737;" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="#" onclick="authManager.logout()">Logout</a></li>
+          </ul>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Welcome Section -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <h2 id="welcomeMessage">Welcome back!</h2>
+                <p class="text-muted">Manage your job applications and saved jobs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row mb-4">
+          <div class="col-md-4 mb-3">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fa-solid fa-briefcase fs-1 mb-3" style="color:#F03737;"></i>
+                <h4 id="appliedJobsCount">0</h4>
+                <p class="text-muted">Applied Jobs</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fa-solid fa-heart fs-1 mb-3" style="color:#F03737;"></i>
+                <h4 id="savedJobsCount">0</h4>
+                <p class="text-muted">Saved Jobs</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
+                <i class="fa-solid fa-user fs-1 mb-3" style="color:#F03737;"></i>
+                <h4>Active</h4>
+                <p class="text-muted">Profile Status</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="row">
+          <div class="col-12">
+            <ul class="nav nav-tabs" id="dashboardTabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#appliedJobs">Applied Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#savedJobs">Saved Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#profile">Profile</a>
+              </li>
+            </ul>
+
+            <div class="tab-content mt-4">
+              <!-- Applied Jobs Tab -->
+              <div class="tab-pane fade show active" id="appliedJobs">
+                <div class="card shadow">
+                  <div class="card-header">
+                    <h5 class="mb-0">Your Job Applications</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="appliedJobsList">
+                      <p class="text-muted text-center">No job applications yet. <a href="job.html">Browse jobs</a> to get started!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Saved Jobs Tab -->
+              <div class="tab-pane fade" id="savedJobs">
+                <div class="card shadow">
+                  <div class="card-header">
+                    <h5 class="mb-0">Your Saved Jobs</h5>
+                  </div>
+                  <div class="card-body">
+                    <div id="savedJobsList">
+                      <p class="text-muted text-center">No saved jobs yet. <a href="job.html">Browse jobs</a> and save your favorites!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Profile Tab -->
+              <div class="tab-pane fade" id="profile">
+                <div class="card shadow">
+                  <div class="card-header">
+                    <h5 class="mb-0">Profile Information</h5>
+                  </div>
+                  <div class="card-body">
+                    <form id="profileForm">
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">Full Name</label>
+                          <input type="text" class="form-control" id="profileName" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">Email</label>
+                          <input type="email" class="form-control" id="profileEmail" readonly>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Member Since</label>
+                        <input type="text" class="form-control" id="memberSince" readonly>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Bio</label>
+                        <textarea class="form-control" rows="3" placeholder="Tell us about yourself..."></textarea>
+                      </div>
+                      <button type="button" class="btn" style="background-color:#F03737; color:white;" onclick="updateProfile()">Update Profile</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light mt-5" style="background-color:#212529;">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <h2 class="text-center">Contact <span style="color:#F03737;">Info</span></h2>
+            <hr class="text-light" />
+            <p>DO YOU HAVE A QUESTION?<br /><span class="fs-5">info@myjobgator.com</span></p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Quick <span style="color:#F03737;">Links</span></h2>
+            <hr class="text-light" />
+            <a href="index.html" class="text-decoration-none text-light d-block mb-2">Home</a>
+            <a href="job.html" class="text-decoration-none text-light d-block mb-2">Jobs</a>
+            <a href="career.html" class="text-decoration-none text-light d-block mb-2">Career</a>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Our <span style="color:#F03737;">Company</span></h2>
+            <hr class="text-light" />
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+            <a href="privacy.html" class="text-decoration-none text-light d-block mb-2">Privacy Policy</a>
+            <a href="contact.html" class="text-decoration-none text-light d-block mb-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/job-database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/session-manager.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -41,10 +41,11 @@
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active ms-lg-3" href="job.html">Jobs</a></li>
             <li class="nav-item"><a class="nav-link active ms-lg-3" href="career.html">Career Advice</a></li>
-            <li class="nav-item"><a class="nav-link active ms-lg-3" href="#">Sectors</a></li>
-            <li class="nav-item"><a class="nav-link active ms-lg-3" style="color:#5D61BF;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link active ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link active ms-lg-3" style="color:#F03737;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link active ms-lg-3" style="color:#F03737;" href="register.html">Sign Up</a></li>
           </ul>
-          <a href="register.html" class="btn text-light px-3" style="background-color:#5D61BF;">Sign Up</a>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
         </div>
       </div>
     </nav>
@@ -67,7 +68,7 @@
             <input type="text" class="form-control border-0 rounded-0 p-3 shadow" placeholder="Location" />
           </div>
           <div class="col-12 col-md-2 col-lg-2">
-            <a href="#" class="btn text-light p-3 w-100" style="background-color:#5D61BF;">Search</a>
+            <a href="#" class="btn text-light p-3 w-100" style="background-color:#F03737;">Search</a>
           </div>
         </div>
       </div>
@@ -81,7 +82,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           <!-- Job card -->
           <div class="col">
-            <div class="card cardjob h-100">
+            <div class="card cardjob h-100" onclick="window.location.href='job-details.html'">
               <div class="row align-items-center p-3">
                 <div class="col-3 text-center">
                   <img src="images/jobicon.png" class="img-fluid border" alt="Job Icon" />
@@ -91,7 +92,7 @@
                   <small>India</small>
                 </div>
                 <div class="col-3 text-center">
-                  <a href="#" class="btn btn-primary">Apply</a>
+                  <a href="job-details.html" class="btn btn-primary" onclick="event.stopPropagation()">View Details</a>
                 </div>
               </div>
             </div>
@@ -99,7 +100,7 @@
 
           <!-- Repeat similar job cards -->
           <div class="col">
-            <div class="card cardjob h-100">
+            <div class="card cardjob h-100" onclick="window.location.href='job-details.html'">
               <div class="row align-items-center p-3">
                 <div class="col-3 text-center">
                   <img src="images/jobicon.png" class="img-fluid border" alt="Job Icon" />
@@ -110,7 +111,7 @@
                   <small>India</small>
                 </div>
                 <div class="col-3 text-center">
-                  <a href="#" class="btn btn-primary">Apply</a>
+                  <a href="job-details.html" class="btn btn-primary" onclick="event.stopPropagation()">View Details</a>
                 </div>
               </div>
             </div>
@@ -118,7 +119,7 @@
 
           <!-- More job cards -->
           <div class="col">
-            <div class="card cardjob h-100">
+            <div class="card cardjob h-100" onclick="window.location.href='job-details.html'">
               <div class="row align-items-center p-3">
                 <div class="col-3 text-center">
                   <img src="images/jobicon.png" class="img-fluid border" alt="Job Icon" />
@@ -128,7 +129,7 @@
                   <small>India</small>
                 </div>
                 <div class="col-3 text-center">
-                  <a href="#" class="btn btn-primary">Apply</a>
+                  <a href="job-details.html" class="btn btn-primary" onclick="event.stopPropagation()">View Details</a>
                 </div>
               </div>
             </div>
@@ -207,5 +208,10 @@
   </div>
 
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/job-database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/session-manager.js"></script>
+  <script src="js/job-search.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 </html>

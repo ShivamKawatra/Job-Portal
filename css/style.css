@@ -8,18 +8,98 @@
     margin-top: 15px;
     display: block;
 }
-/* .dropdown-menu:hover{
-    color: #5B3BD8;
-} */
 
 .card:hover{
-    box-shadow: 1px 1px 10px #F03737 ;
+    box-shadow: 1px 1px 10px #F03737;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
 }
 .cardd:hover{
-    box-shadow: 1px 1px 10px #5B3BD8 ;
+    box-shadow: 1px 1px 10px #5B3BD8;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
 }
 .cardjob:hover{
-    box-shadow: 1px 1px 10px #5B3BD8 ;
+    box-shadow: 1px 1px 10px #5B3BD8;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Button Animations */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Form Enhancements */
+.form-control:focus {
+    border-color: #F03737;
+    box-shadow: 0 0 0 0.2rem rgba(240, 55, 55, 0.25);
+}
+
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+/* Loading Spinner */
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Job Details Enhancements */
+.job-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    font-size: 0.75em;
+    margin-right: 0.5rem;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Alert Positioning */
+.alert {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Active States */
+.nav-link.active {
+    font-weight: 600;
+}
+
+/* Footer Improvements */
+footer a:hover {
+    color: #F03737 !important;
+    transition: color 0.3s ease;
 }
 
 /* login page start */
@@ -36,11 +116,48 @@
       url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    
-
 }
 .text-justify{
     text-align: justify;
+}
+
+/* Additional Utility Classes */
+.text-primary-custom {
+    color: #F03737 !important;
+}
+
+.bg-primary-custom {
+    background-color: #F03737 !important;
+}
+
+.text-secondary-custom {
+    color: #5B3BD8 !important;
+}
+
+.bg-secondary-custom {
+    background-color: #5B3BD8 !important;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #F03737 0%, #FF6B6B 100%);
+}
+
+.bg-gradient-secondary {
+    background: linear-gradient(135deg, #5B3BD8 0%, #8B7ED8 100%);
+}
+
+/* Shadow Utilities */
+.shadow-sm-custom {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shadow-md-custom {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.shadow-lg-custom {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 
@@ -62,4 +179,106 @@
       url('../images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* Enhanced Form Validation */
+.form-floating {
+    position: relative;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    opacity: 0.65;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Success States */
+.is-valid {
+    border-color: #28a745;
+}
+
+.valid-feedback {
+    display: block;
+    color: #28a745;
+}
+
+/* Custom Checkbox and Radio */
+.form-check-input:checked {
+    background-color: #F03737;
+    border-color: #F03737;
+}
+
+/* File Upload Styling */
+.form-control[type="file"] {
+    padding: 0.5rem;
+}
+
+.form-control[type="file"]::-webkit-file-upload-button {
+    background-color: #F03737;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Responsive Forms */
+@media (max-width: 992px) {
+    #login, #register {
+        margin: 20px auto;
+        width: 90%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    #login, #register {
+        margin: 10px;
+        width: calc(100% - 20px);
+        height: auto;
+        min-height: 400px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Job Gator | Blog Details</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top p-2">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="images/asset 0.png" alt="Logo" height="50" class="ms-2 my-2 img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="job.html">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link active ms-lg-3" href="career.html">Career Advice</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="register.html">Sign Up</a></li>
+          </ul>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div id="blogContent">
+              <!-- Content will be loaded dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light mt-5" style="background-color:#212529;">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <h2 class="text-center">Contact <span style="color:#F03737;">Info</span></h2>
+            <hr class="text-light" />
+            <p>DO YOU HAVE A QUESTION?<br /><span class="fs-5">info@myjobgator.com</span></p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Quick <span style="color:#F03737;">Links</span></h2>
+            <hr class="text-light" />
+            <a href="index.html" class="text-decoration-none text-light d-block mb-2">Home</a>
+            <a href="job.html" class="text-decoration-none text-light d-block mb-2">Jobs</a>
+            <a href="career.html" class="text-decoration-none text-light d-block mb-2">Career</a>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Our <span style="color:#F03737;">Company</span></h2>
+            <hr class="text-light" />
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+            <a href="privacy.html" class="text-decoration-none text-light d-block mb-2">Privacy Policy</a>
+            <a href="contact.html" class="text-decoration-none text-light d-block mb-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script>
+    // Blog content data
+    const blogContent = {
+      1: {
+        title: "How To Earn a Bachelor's Degree in IT",
+        content: `
+          <h1>How To Earn a Bachelor's Degree in IT</h1>
+          <p class="text-muted">Published: Jan 15, 2024 | 5 min read</p>
+          <img src="images/blog1.jpg" class="img-fluid mb-4" alt="IT Degree">
+          
+          <p>Pursuing a Bachelor's Degree in Information Technology opens doors to a rewarding and dynamic career in the tech industry. Here's your complete guide to getting started.</p>
+          
+          <h3>Why Choose IT?</h3>
+          <p>The IT industry offers excellent job security, competitive salaries, and opportunities for continuous learning. With technology evolving rapidly, IT professionals are always in high demand.</p>
+          
+          <h3>Degree Requirements</h3>
+          <ul>
+            <li>High school diploma or equivalent</li>
+            <li>Strong foundation in mathematics</li>
+            <li>Basic computer literacy</li>
+            <li>Problem-solving aptitude</li>
+          </ul>
+          
+          <h3>Core Subjects</h3>
+          <p>A typical IT degree covers programming languages, database management, network security, web development, and system analysis.</p>
+          
+          <h3>Career Opportunities</h3>
+          <p>Graduates can pursue roles as software developers, system administrators, cybersecurity analysts, or IT consultants with starting salaries ranging from ₹4-8 lakhs per annum.</p>
+        `
+      },
+      2: {
+        title: "Top 10 Interview Tips for Tech Jobs",
+        content: `
+          <h1>Top 10 Interview Tips for Tech Jobs</h1>
+          <p class="text-muted">Published: Jan 12, 2024 | 7 min read</p>
+          <img src="images/blog2.jpg" class="img-fluid mb-4" alt="Tech Interview">
+          
+          <p>Landing your dream tech job requires more than just technical skills. Here are proven strategies to ace your next tech interview.</p>
+          
+          <h3>1. Master the Fundamentals</h3>
+          <p>Review data structures, algorithms, and system design concepts. Practice coding problems on platforms like LeetCode and HackerRank.</p>
+          
+          <h3>2. Prepare Your Portfolio</h3>
+          <p>Showcase your best projects on GitHub. Include detailed README files and live demos when possible.</p>
+          
+          <h3>3. Research the Company</h3>
+          <p>Understand the company's products, culture, and recent news. This shows genuine interest and helps you ask informed questions.</p>
+          
+          <h3>4. Practice Behavioral Questions</h3>
+          <p>Use the STAR method (Situation, Task, Action, Result) to structure your responses to behavioral questions.</p>
+          
+          <h3>5. Ask Smart Questions</h3>
+          <p>Prepare thoughtful questions about the team, technology stack, and growth opportunities.</p>
+        `
+      },
+      3: {
+        title: "How To Start a Digital Marketing Career",
+        content: `
+          <h1>How To Start a Digital Marketing Career</h1>
+          <p class="text-muted">Published: Jan 10, 2024 | 6 min read</p>
+          <img src="images/blog3.jpg" class="img-fluid mb-4" alt="Digital Marketing">
+          
+          <p>Digital marketing offers exciting opportunities in today's digital-first world. Learn the essential skills and steps to launch your career in this dynamic field.</p>
+          
+          <h3>Essential Skills</h3>
+          <ul>
+            <li>SEO and SEM knowledge</li>
+            <li>Social media marketing</li>
+            <li>Content creation and strategy</li>
+            <li>Analytics and data interpretation</li>
+            <li>Email marketing</li>
+          </ul>
+          
+          <h3>Getting Started</h3>
+          <p>Begin with free online courses from Google, Facebook, and HubSpot. Build a portfolio by managing social media for local businesses or creating your own blog.</p>
+          
+          <h3>Career Paths</h3>
+          <p>Digital marketing offers diverse roles: SEO specialist, social media manager, content marketer, PPC specialist, or digital marketing manager.</p>
+          
+          <h3>Salary Expectations</h3>
+          <p>Entry-level positions start at ₹3-5 lakhs, with experienced professionals earning ₹8-15 lakhs annually.</p>
+        `
+      },
+      4: {
+        title: "Remote Work: Pros and Cons",
+        content: `
+          <h1>Remote Work: Pros and Cons</h1>
+          <p class="text-muted">Published: Jan 8, 2024 | 4 min read</p>
+          <img src="images/blog4.lpg.jpg" class="img-fluid mb-4" alt="Remote Work">
+          
+          <p>Remote work has become mainstream. Explore the advantages and challenges of working from home and how to succeed in a distributed team environment.</p>
+          
+          <h3>Advantages of Remote Work</h3>
+          <ul>
+            <li>Flexible schedule and work-life balance</li>
+            <li>No commuting time and costs</li>
+            <li>Access to global job opportunities</li>
+            <li>Increased productivity and focus</li>
+            <li>Cost savings on office attire and meals</li>
+          </ul>
+          
+          <h3>Challenges</h3>
+          <ul>
+            <li>Isolation and lack of social interaction</li>
+            <li>Difficulty separating work and personal life</li>
+            <li>Communication barriers</li>
+            <li>Distractions at home</li>
+            <li>Technology and internet dependency</li>
+          </ul>
+          
+          <h3>Success Tips</h3>
+          <p>Create a dedicated workspace, establish routines, communicate regularly with your team, and invest in good technology and internet connection.</p>
+        `
+      },
+      5: {
+        title: "Building Your Professional Network",
+        content: `
+          <h1>Building Your Professional Network</h1>
+          <p class="text-muted">Published: Jan 5, 2024 | 5 min read</p>
+          <img src="images/blog5.jpg" class="img-fluid mb-4" alt="Professional Network">
+          
+          <p>Networking is crucial for career growth. Learn effective strategies to build meaningful professional relationships that can advance your career.</p>
+          
+          <h3>Why Network?</h3>
+          <p>80% of jobs are never advertised publicly. Networking helps you access hidden job markets, gain industry insights, and find mentors.</p>
+          
+          <h3>Online Networking</h3>
+          <ul>
+            <li>Optimize your LinkedIn profile</li>
+            <li>Join industry-specific groups</li>
+            <li>Share valuable content regularly</li>
+            <li>Engage with others' posts meaningfully</li>
+            <li>Attend virtual events and webinars</li>
+          </ul>
+          
+          <h3>Offline Networking</h3>
+          <ul>
+            <li>Attend industry conferences and meetups</li>
+            <li>Join professional associations</li>
+            <li>Participate in alumni events</li>
+            <li>Volunteer for causes you care about</li>
+          </ul>
+          
+          <h3>Networking Etiquette</h3>
+          <p>Focus on giving value first, be genuine in your interactions, follow up promptly, and maintain relationships long-term.</p>
+        `
+      },
+      6: {
+        title: "Salary Negotiation Strategies",
+        content: `
+          <h1>Salary Negotiation Strategies</h1>
+          <p class="text-muted">Published: Jan 3, 2024 | 6 min read</p>
+          <img src="images/blog6.png" class="img-fluid mb-4" alt="Salary Negotiation">
+          
+          <p>Learn how to negotiate your salary effectively and get the compensation you deserve in your next job offer or performance review.</p>
+          
+          <h3>Research Market Rates</h3>
+          <p>Use websites like Glassdoor, PayScale, and Naukri to understand salary ranges for your role, experience level, and location.</p>
+          
+          <h3>Preparation Steps</h3>
+          <ul>
+            <li>Document your achievements and contributions</li>
+            <li>Gather salary data for similar roles</li>
+            <li>Consider the total compensation package</li>
+            <li>Practice your negotiation conversation</li>
+            <li>Determine your minimum acceptable offer</li>
+          </ul>
+          
+          <h3>Negotiation Tips</h3>
+          <ul>
+            <li>Express enthusiasm for the role first</li>
+            <li>Present your case with data and examples</li>
+            <li>Be confident but respectful</li>
+            <li>Consider non-salary benefits</li>
+            <li>Get the final offer in writing</li>
+          </ul>
+          
+          <h3>Beyond Base Salary</h3>
+          <p>Consider negotiating flexible hours, additional vacation days, professional development budget, or stock options.</p>
+        `
+      },
+      7: {
+        title: "Skills for the Future Workplace",
+        content: `
+          <h1>Skills for the Future Workplace</h1>
+          <p class="text-muted">Published: Dec 28, 2023 | 7 min read</p>
+          <img src="images/blog7.jpg" class="img-fluid mb-4" alt="Future Skills">
+          
+          <p>Discover the most in-demand skills for 2024 and beyond, including technical abilities, soft skills, and emerging competencies.</p>
+          
+          <h3>Technical Skills in Demand</h3>
+          <ul>
+            <li>Artificial Intelligence and Machine Learning</li>
+            <li>Cloud Computing (AWS, Azure, GCP)</li>
+            <li>Data Science and Analytics</li>
+            <li>Cybersecurity</li>
+            <li>Mobile and Web Development</li>
+            <li>DevOps and Automation</li>
+          </ul>
+          
+          <h3>Essential Soft Skills</h3>
+          <ul>
+            <li>Critical thinking and problem-solving</li>
+            <li>Emotional intelligence</li>
+            <li>Adaptability and flexibility</li>
+            <li>Communication and collaboration</li>
+            <li>Leadership and team management</li>
+          </ul>
+          
+          <h3>Emerging Skills</h3>
+          <p>Blockchain development, IoT programming, AR/VR development, and sustainability knowledge are becoming increasingly valuable.</p>
+          
+          <h3>Continuous Learning</h3>
+          <p>Stay relevant by taking online courses, attending workshops, earning certifications, and practicing new technologies through personal projects.</p>
+        `
+      },
+      8: {
+        title: "Creating an Impressive Resume",
+        content: `
+          <h1>Creating an Impressive Resume</h1>
+          <p class="text-muted">Published: Dec 25, 2023 | 5 min read</p>
+          <img src="images/blog8.jpg" class="img-fluid mb-4" alt="Resume Writing">
+          
+          <p>Stand out from the crowd with a well-crafted resume. Learn tips and best practices for different industries and experience levels.</p>
+          
+          <h3>Resume Structure</h3>
+          <ul>
+            <li>Contact information and professional summary</li>
+            <li>Work experience (reverse chronological order)</li>
+            <li>Education and certifications</li>
+            <li>Skills and technical competencies</li>
+            <li>Projects and achievements</li>
+          </ul>
+          
+          <h3>Writing Tips</h3>
+          <ul>
+            <li>Use action verbs and quantify achievements</li>
+            <li>Tailor your resume for each job application</li>
+            <li>Keep it concise (1-2 pages maximum)</li>
+            <li>Use a clean, professional format</li>
+            <li>Proofread for grammar and spelling errors</li>
+          </ul>
+          
+          <h3>ATS Optimization</h3>
+          <p>Use relevant keywords from the job description, avoid complex formatting, and save in both PDF and Word formats.</p>
+          
+          <h3>Common Mistakes</h3>
+          <p>Avoid generic objectives, employment gaps without explanation, irrelevant information, and unprofessional email addresses.</p>
+        `
+      },
+      9: {
+        title: "Career Change at 30+",
+        content: `
+          <h1>Career Change at 30+: It's Never Too Late</h1>
+          <p class="text-muted">Published: Dec 22, 2023 | 6 min read</p>
+          <img src="images/blog9.png" class="img-fluid mb-4" alt="Career Change">
+          
+          <p>It's never too late to change careers. Learn how to successfully transition to a new field later in your career and make the most of your experience.</p>
+          
+          <h3>Why Change Careers?</h3>
+          <ul>
+            <li>Lack of fulfillment in current role</li>
+            <li>Better growth opportunities elsewhere</li>
+            <li>Industry changes or automation</li>
+            <li>Personal interests and passions</li>
+            <li>Work-life balance considerations</li>
+          </ul>
+          
+          <h3>Planning Your Transition</h3>
+          <ul>
+            <li>Assess your transferable skills</li>
+            <li>Research your target industry thoroughly</li>
+            <li>Build relevant skills through courses or projects</li>
+            <li>Network with professionals in the new field</li>
+            <li>Consider gradual transition or part-time roles</li>
+          </ul>
+          
+          <h3>Overcoming Challenges</h3>
+          <p>Address age bias by highlighting your experience, staying current with technology, and demonstrating enthusiasm for learning.</p>
+          
+          <h3>Success Stories</h3>
+          <p>Many professionals have successfully changed careers at 30, 40, or even 50+. Your experience and maturity can be valuable assets in a new field.</p>
+        `
+      },
+      10: {
+        title: "Freelancing vs Full-Time Employment",
+        content: `
+          <h1>Freelancing vs Full-Time Employment: Which is Right for You?</h1>
+          <p class="text-muted">Published: Dec 20, 2023 | 8 min read</p>
+          <img src="images/blog10.png" class="img-fluid mb-4" alt="Freelancing">
+          
+          <p>The modern workforce offers multiple paths to career success. Understanding the pros and cons of freelancing versus traditional employment can help you make the right choice.</p>
+          
+          <h3>Freelancing Advantages</h3>
+          <ul>
+            <li>Complete control over your schedule and workload</li>
+            <li>Ability to choose clients and projects</li>
+            <li>Potential for higher hourly rates</li>
+            <li>Tax benefits and business deductions</li>
+            <li>Diverse experience across multiple industries</li>
+            <li>Location independence</li>
+          </ul>
+          
+          <h3>Full-Time Employment Benefits</h3>
+          <ul>
+            <li>Steady, predictable income</li>
+            <li>Comprehensive benefits package</li>
+            <li>Career advancement opportunities</li>
+            <li>Team collaboration and mentorship</li>
+            <li>Job security and stability</li>
+            <li>Paid time off and sick leave</li>
+          </ul>
+          
+          <h3>Making the Decision</h3>
+          <p>Consider your financial situation, risk tolerance, career goals, and personal preferences. Some professionals even combine both approaches with part-time employment and freelance work.</p>
+        `
+      },
+      11: {
+        title: "LinkedIn Profile Optimization Guide",
+        content: `
+          <h1>LinkedIn Profile Optimization: Stand Out to Recruiters</h1>
+          <p class="text-muted">Published: Dec 18, 2023 | 7 min read</p>
+          <img src="images/blog11.png" class="img-fluid mb-4" alt="LinkedIn Profile">
+          
+          <p>Your LinkedIn profile is your digital business card. A well-optimized profile can attract recruiters, showcase your expertise, and open doors to new opportunities.</p>
+          
+          <h3>Profile Photo Tips</h3>
+          <ul>
+            <li>Use a professional, high-quality headshot</li>
+            <li>Smile and make eye contact with the camera</li>
+            <li>Dress appropriately for your industry</li>
+            <li>Use a clean, neutral background</li>
+            <li>Ensure your face takes up 60% of the frame</li>
+          </ul>
+          
+          <h3>Headline Optimization</h3>
+          <p>Your headline should be more than just your job title. Include keywords, value proposition, and what makes you unique. Example: "Senior Software Developer | React & Node.js Expert | Building Scalable Web Applications"</p>
+          
+          <h3>Summary Section</h3>
+          <p>Write in first person, tell your professional story, highlight achievements with numbers, and include a call-to-action. Keep it engaging and keyword-rich.</p>
+          
+          <h3>Experience Section</h3>
+          <p>Use bullet points, quantify achievements, include relevant keywords, and add media like presentations or project screenshots.</p>
+        `
+      },
+      12: {
+        title: "Work-Life Balance in Tech Industry",
+        content: `
+          <h1>Achieving Work-Life Balance in the Tech Industry</h1>
+          <p class="text-muted">Published: Dec 15, 2023 | 6 min read</p>
+          <img src="images/blog12.jpg" class="img-fluid mb-4" alt="Work Life Balance">
+          
+          <p>The tech industry is known for its fast pace and demanding schedules. However, maintaining a healthy work-life balance is crucial for long-term success and personal well-being.</p>
+          
+          <h3>Common Challenges</h3>
+          <ul>
+            <li>Long hours and tight deadlines</li>
+            <li>Always-on culture with constant connectivity</li>
+            <li>Rapid technology changes requiring continuous learning</li>
+            <li>High-pressure environments and competition</li>
+            <li>Blurred boundaries between work and personal time</li>
+          </ul>
+          
+          <h3>Strategies for Balance</h3>
+          <ul>
+            <li>Set clear boundaries between work and personal time</li>
+            <li>Use time management techniques like Pomodoro</li>
+            <li>Take regular breaks and vacation time</li>
+            <li>Communicate openly with your team about workload</li>
+            <li>Invest in hobbies and relationships outside of work</li>
+            <li>Practice mindfulness and stress management</li>
+          </ul>
+          
+          <h3>Company Culture Matters</h3>
+          <p>Look for companies that prioritize employee well-being, offer flexible work arrangements, and have realistic expectations about work hours.</p>
+        `
+      }
+    };
+
+    // Load blog content based on URL parameter
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const blogId = urlParams.get('id') || '1';
+      
+      const content = blogContent[blogId] || blogContent[1];
+      document.getElementById('blogContent').innerHTML = content.content;
+      document.title = content.title + ' | My Job Gator';
+    });
+  </script>
+</body>
+</html>

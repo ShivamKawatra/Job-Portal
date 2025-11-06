@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Job Gator | Post a Job</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top p-2">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="images/asset 0.png" alt="Logo" height="50" class="ms-2 my-2 img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="job.html">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="career.html">Career Advice</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="register.html">Sign Up</a></li>
+          </ul>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5" style="background-color:#F2F6FF;">
+      <div class="container text-center">
+        <h1 class="fw-bold">Post a Job</h1>
+        <p class="fs-5">Find the perfect candidate for your company</p>
+      </div>
+    </section>
+
+    <!-- Job Posting Form -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow">
+              <div class="card-body p-5">
+                <form id="jobPostForm">
+                  <!-- Company Information -->
+                  <h4 class="mb-4" style="color:#F03737;">Company Information</h4>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Company Name *</label>
+                      <input type="text" class="form-control" id="companyName" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Company Website</label>
+                      <input type="url" class="form-control" id="companyWebsite">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Company Description</label>
+                    <textarea class="form-control" id="companyDescription" rows="3"></textarea>
+                  </div>
+
+                  <hr class="my-4">
+
+                  <!-- Job Details -->
+                  <h4 class="mb-4" style="color:#F03737;">Job Details</h4>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Job Title *</label>
+                      <input type="text" class="form-control" id="jobTitle" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Job Category *</label>
+                      <select class="form-control" id="jobCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="technology">Technology & IT</option>
+                        <option value="healthcare">Healthcare & Medical</option>
+                        <option value="finance">Finance & Banking</option>
+                        <option value="education">Education & Training</option>
+                        <option value="marketing">Marketing & Sales</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="hr">Human Resources</option>
+                        <option value="legal">Legal & Law</option>
+                        <option value="creative">Creative & Design</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Employment Type *</label>
+                      <select class="form-control" id="employmentType" required>
+                        <option value="">Select Type</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="contract">Contract</option>
+                        <option value="internship">Internship</option>
+                        <option value="freelance">Freelance</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Experience Level *</label>
+                      <select class="form-control" id="experienceLevel" required>
+                        <option value="">Select Level</option>
+                        <option value="entry">Entry Level</option>
+                        <option value="mid">Mid Level</option>
+                        <option value="senior">Senior Level</option>
+                        <option value="executive">Executive</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Location *</label>
+                      <input type="text" class="form-control" id="jobLocation" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Remote Work</label>
+                      <select class="form-control" id="remoteWork">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                        <option value="hybrid">Hybrid</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Minimum Salary</label>
+                      <input type="number" class="form-control" id="minSalary" placeholder="50000">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Maximum Salary</label>
+                      <input type="number" class="form-control" id="maxSalary" placeholder="80000">
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Job Description *</label>
+                    <textarea class="form-control" id="jobDescription" rows="6" required placeholder="Describe the role, responsibilities, and requirements..."></textarea>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Required Skills</label>
+                    <input type="text" class="form-control" id="requiredSkills" placeholder="JavaScript, React, Node.js (comma separated)">
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Benefits</label>
+                    <textarea class="form-control" id="benefits" rows="3" placeholder="Health insurance, 401k, flexible hours..."></textarea>
+                  </div>
+
+                  <hr class="my-4">
+
+                  <!-- Contact Information -->
+                  <h4 class="mb-4" style="color:#F03737;">Contact Information</h4>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Contact Email *</label>
+                      <input type="email" class="form-control" id="contactEmail" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Contact Phone</label>
+                      <input type="tel" class="form-control" id="contactPhone">
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="form-label">Application Deadline</label>
+                    <input type="date" class="form-control" id="applicationDeadline">
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="text-center">
+                    <button type="submit" class="btn text-light px-5 py-3" style="background-color:#F03737;">
+                      <i class="fa-solid fa-plus"></i> Post Job
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light mt-5" style="background-color:#212529;">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <h2 class="text-center">Contact <span style="color:#F03737;">Info</span></h2>
+            <hr class="text-light" />
+            <p>DO YOU HAVE A QUESTION?<br /><span class="fs-5">info@myjobgator.com</span></p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Quick <span style="color:#F03737;">Links</span></h2>
+            <hr class="text-light" />
+            <a href="index.html" class="text-decoration-none text-light d-block mb-2">Home</a>
+            <a href="job.html" class="text-decoration-none text-light d-block mb-2">Jobs</a>
+            <a href="career.html" class="text-decoration-none text-light d-block mb-2">Career</a>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Our <span style="color:#F03737;">Company</span></h2>
+            <hr class="text-light" />
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+            <a href="privacy.html" class="text-decoration-none text-light d-block mb-2">Privacy Policy</a>
+            <a href="contact.html" class="text-decoration-none text-light d-block mb-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/validation.js"></script>
+</body>
+</html>

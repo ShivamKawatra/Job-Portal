@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Job Gator | Job Details</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top p-2">
+      <div class="container-fluid">
+        <a href="index.html">
+          <img src="images/asset 0.png" alt="Logo" height="50" class="ms-2 my-2 img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="job.html">Jobs</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="career.html">Career Advice</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" href="sectors.html">Sectors</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link ms-lg-3" style="color:#F03737;" href="register.html">Sign Up</a></li>
+          </ul>
+          <a href="post-job.html" class="btn text-light px-3" style="background-color:#F03737;">+ Post a Job</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Job Details Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Job Information -->
+          <div class="col-lg-8">
+            <div class="card shadow mb-4">
+              <div class="card-body p-4">
+                <!-- Job Header -->
+                <div class="d-flex align-items-center mb-4">
+                  <img src="images/jobicon.png" class="me-3" alt="Company Logo" style="width: 80px; height: 80px;">
+                  <div class="flex-grow-1">
+                    <h2 class="mb-1">Senior Software Developer</h2>
+                    <h5 class="text-muted mb-2">TechCorp Solutions</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                      <span class="badge bg-primary">Full-time</span>
+                      <span class="badge bg-success">Remote</span>
+                      <span class="badge bg-info">Senior Level</span>
+                    </div>
+                  </div>
+                  <div class="text-end">
+                    <button class="btn btn-outline-danger mb-2" onclick="saveJob()">
+                      <i class="fa-regular fa-heart"></i> Save Job
+                    </button>
+                    <br>
+                    <small class="text-muted">Posted 2 days ago</small>
+                  </div>
+                </div>
+
+                <!-- Job Overview -->
+                <div class="row mb-4">
+                  <div class="col-md-3 mb-2">
+                    <strong>Salary:</strong><br>
+                    <span class="text-success">₹8,00,000 - ₹12,00,000</span>
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <strong>Location:</strong><br>
+                    Mumbai, Maharashtra
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <strong>Experience:</strong><br>
+                    5+ years
+                  </div>
+                  <div class="col-md-3 mb-2">
+                    <strong>Education:</strong><br>
+                    Bachelor's Degree
+                  </div>
+                </div>
+
+                <!-- Job Description -->
+                <div class="mb-4">
+                  <h4 style="color:#F03737;">Job Description</h4>
+                  <p class="text-justify">We are seeking a talented Senior Software Developer to join our dynamic team. The ideal candidate will have extensive experience in full-stack development and a passion for creating innovative solutions.</p>
+                  
+                  <h5>Key Responsibilities:</h5>
+                  <ul>
+                    <li>Design and develop scalable web applications</li>
+                    <li>Collaborate with cross-functional teams to define and implement new features</li>
+                    <li>Write clean, maintainable, and efficient code</li>
+                    <li>Participate in code reviews and mentor junior developers</li>
+                    <li>Stay up-to-date with emerging technologies and industry trends</li>
+                  </ul>
+
+                  <h5>Required Skills:</h5>
+                  <ul>
+                    <li>Proficiency in JavaScript, Python, or Java</li>
+                    <li>Experience with React, Angular, or Vue.js</li>
+                    <li>Knowledge of database systems (SQL and NoSQL)</li>
+                    <li>Familiarity with cloud platforms (AWS, Azure, or GCP)</li>
+                    <li>Strong problem-solving and communication skills</li>
+                  </ul>
+
+                  <h5>Benefits:</h5>
+                  <ul>
+                    <li>Competitive salary and performance bonuses</li>
+                    <li>Comprehensive health insurance</li>
+                    <li>Flexible working hours and remote work options</li>
+                    <li>Professional development opportunities</li>
+                    <li>401(k) retirement plan with company matching</li>
+                  </ul>
+                </div>
+
+                <!-- Apply Button -->
+                <div class="text-center">
+                  <button class="btn text-light px-5 py-3" style="background-color:#F03737;" onclick="applyForJob()">
+                    <i class="fa-solid fa-paper-plane"></i> Apply Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <!-- Company Info -->
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <h5 style="color:#F03737;">About TechCorp Solutions</h5>
+                <p class="text-justify">TechCorp Solutions is a leading technology company specializing in innovative software solutions for businesses worldwide. We pride ourselves on fostering a collaborative and inclusive work environment.</p>
+                
+                <div class="mb-3">
+                  <strong>Industry:</strong> Technology<br>
+                  <strong>Company Size:</strong> 500-1000 employees<br>
+                  <strong>Founded:</strong> 2010<br>
+                  <strong>Location:</strong> Mumbai, Maharashtra<br>
+                  <strong>Website:</strong> <a href="#" style="color:#F03737;">www.techcorp.com</a>
+                </div>
+
+                <a href="#" class="btn btn-outline-primary w-100">View Company Profile</a>
+              </div>
+            </div>
+
+            <!-- Similar Jobs -->
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 style="color:#F03737;">Similar Jobs</h5>
+                
+                <div class="border-bottom pb-3 mb-3">
+                  <h6 class="mb-1">Frontend Developer</h6>
+                  <small class="text-muted">WebTech Inc. • Bangalore • ₹6L-₹8L</small>
+                </div>
+                
+                <div class="border-bottom pb-3 mb-3">
+                  <h6 class="mb-1">Full Stack Engineer</h6>
+                  <small class="text-muted">StartupXYZ • Pune • ₹7L-₹9L</small>
+                </div>
+                
+                <div class="pb-3 mb-3">
+                  <h6 class="mb-1">Software Architect</h6>
+                  <small class="text-muted">ArchTech Solutions • Hyderabad • ₹20L-₹28L</small>
+                </div>
+
+                <a href="job.html" class="btn btn-outline-secondary w-100">View All Jobs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light mt-5" style="background-color:#212529;">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-12 col-md-4">
+            <h2 class="text-center">Contact <span style="color:#F03737;">Info</span></h2>
+            <hr class="text-light" />
+            <p>DO YOU HAVE A QUESTION?<br /><span class="fs-5">info@myjobgator.com</span></p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Quick <span style="color:#F03737;">Links</span></h2>
+            <hr class="text-light" />
+            <a href="index.html" class="text-decoration-none text-light d-block mb-2">Home</a>
+            <a href="job.html" class="text-decoration-none text-light d-block mb-2">Jobs</a>
+            <a href="career.html" class="text-decoration-none text-light d-block mb-2">Career</a>
+          </div>
+          <div class="col-6 col-md-4">
+            <h2 class="text-center">Our <span style="color:#F03737;">Company</span></h2>
+            <hr class="text-light" />
+            <a href="about.html" class="text-decoration-none text-light d-block mb-2">About Us</a>
+            <a href="privacy.html" class="text-decoration-none text-light d-block mb-2">Privacy Policy</a>
+            <a href="contact.html" class="text-decoration-none text-light d-block mb-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/job-database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/session-manager.js"></script>
+  <script src="js/job-search.js"></script>
+  <script src="js/job-details.js"></script>
+</body>
+</html>
