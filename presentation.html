@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Job Gator - Project Presentation</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .slide { min-height: 100vh; display: none; padding: 2rem; }
+        .slide.active { display: flex; flex-direction: column; justify-content: center; }
+        .slide-counter { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .nav-btn { position: fixed; bottom: 20px; z-index: 1000; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="slide-counter badge bg-primary fs-6">
+        <span id="current-slide">1</span> / <span id="total-slides">10</span>
+    </div>
+    
+    <button class="nav-btn btn btn-secondary" style="left: 20px;" onclick="prevSlide()">
+        <i class="fas fa-chevron-left"></i> Previous
+    </button>
+    <button class="nav-btn btn btn-secondary" style="right: 20px;" onclick="nextSlide()">
+        Next <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Slide 1: Title -->
+    <div class="slide active text-center" style="background: linear-gradient(135deg, #F03737, #ff6b6b);">
+        <div class="container text-white">
+            <img src="images/asset 0.png" alt="Logo" height="100" class="mb-4">
+            <h1 class="display-2 fw-bold mb-4">My Job Gator</h1>
+            <h2 class="h3 mb-4">Complete Job Portal Website</h2>
+            <p class="lead fs-4">A fully functional job portal with authentication, job management, and career guidance</p>
+            <div class="mt-5">
+                <span class="badge bg-light text-dark fs-6 me-2">HTML5</span>
+                <span class="badge bg-light text-dark fs-6 me-2">CSS3</span>
+                <span class="badge bg-light text-dark fs-6 me-2">Bootstrap 5</span>
+                <span class="badge bg-light text-dark fs-6">JavaScript</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Project Overview -->
+    <div class="slide" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 text-primary mb-4">Project Overview</h1>
+                    <div class="fs-5">
+                        <p><i class="fas fa-check-circle text-success me-2"></i> Complete job portal solution</p>
+                        <p><i class="fas fa-check-circle text-success me-2"></i> User authentication system</p>
+                        <p><i class="fas fa-check-circle text-success me-2"></i> Job search and management</p>
+                        <p><i class="fas fa-check-circle text-success me-2"></i> Career guidance platform</p>
+                        <p><i class="fas fa-check-circle text-success me-2"></i> Responsive design</p>
+                        <p><i class="fas fa-check-circle text-success me-2"></i> Client-side data persistence</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/asset 1.jpeg" alt="Overview" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Key Features -->
+    <div class="slide" style="background-color: #fff;">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5" style="color: #F03737;">Key Features</h1>
+            <div class="feature-grid">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-user-shield fa-3x text-primary mb-3"></i>
+                        <h5>Authentication System</h5>
+                        <p>Secure registration, login, and session management</p>
+                    </div>
+                </div>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-briefcase fa-3x text-success mb-3"></i>
+                        <h5>Job Management</h5>
+                        <p>Search, filter, save, and apply for jobs</p>
+                    </div>
+                </div>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tachometer-alt fa-3x text-warning mb-3"></i>
+                        <h5>User Dashboard</h5>
+                        <p>Track applications and manage profile</p>
+                    </div>
+                </div>
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-route fa-3x text-info mb-3"></i>
+                        <h5>Career Guidance</h5>
+                        <p>Sector information and career advice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Authentication System -->
+    <div class="slide" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+        <div class="container text-white">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 mb-4">Authentication System</h1>
+                    <div class="fs-5">
+                        <p><i class="fas fa-user-plus me-3"></i>User Registration</p>
+                        <p><i class="fas fa-sign-in-alt me-3"></i>Secure Login</p>
+                        <p><i class="fas fa-clock me-3"></i>Session Management</p>
+                        <p><i class="fas fa-user-cog me-3"></i>Profile Updates</p>
+                    </div>
+                    <div class="mt-4">
+                        <span class="badge bg-light text-dark me-2">LocalStorage</span>
+                        <span class="badge bg-light text-dark me-2">Form Validation</span>
+                        <span class="badge bg-light text-dark">Session Persistence</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h5 class="text-dark mb-3">Login Form Preview</h5>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Password" disabled>
+                        </div>
+                        <button class="btn w-100" style="background-color: #F03737; color: white;" disabled>Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Job Management -->
+    <div class="slide" style="background-color: #f1f3f4;">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5" style="color: #F03737;">Job Management Features</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5><i class="fas fa-search text-primary me-2"></i>Advanced Search</h5>
+                            <p>Search by title, location, category with real-time filtering</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5><i class="fas fa-heart text-danger me-2"></i>Save Jobs</h5>
+                            <p>Bookmark favorite listings with visual indicators</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5><i class="fas fa-paper-plane text-success me-2"></i>Apply for Jobs</h5>
+                            <p>Complete application system with resume upload</p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5><i class="fas fa-chart-line text-warning me-2"></i>Track Applications</h5>
+                            <p>Monitor application status and progress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: User Dashboard -->
+    <div class="slide" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+        <div class="container text-white">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 mb-4">User Dashboard</h1>
+                    <p class="fs-5 mb-4">Comprehensive profile and job management center</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text-center p-3 bg-white bg-opacity-20 rounded">
+                                <h3>15</h3>
+                                <p>Applied Jobs</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center p-3 bg-white bg-opacity-20 rounded">
+                                <h3>8</h3>
+                                <p>Saved Jobs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded shadow text-dark">
+                        <h5 class="mb-3">Dashboard Features</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-user text-primary me-2"></i>Profile Management</li>
+                            <li class="mb-2"><i class="fas fa-briefcase text-success me-2"></i>Applied Jobs Tracking</li>
+                            <li class="mb-2"><i class="fas fa-bookmark text-warning me-2"></i>Saved Jobs Collection</li>
+                            <li class="mb-2"><i class="fas fa-chart-bar text-info me-2"></i>Real-time Statistics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Career Guidance -->
+    <div class="slide" style="background-color: #fff;">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5" style="color: #F03737;">Career Guidance Platform</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-industry fa-3x text-primary mb-3"></i>
+                            <h5>Sector Information</h5>
+                            <p>Detailed career paths by experience level across multiple industries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tasks fa-3x text-success mb-3"></i>
+                            <h5>Job Role Descriptions</h5>
+                            <p>What professionals actually do in each role with required skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-blog fa-3x text-warning mb-3"></i>
+                            <h5>Career Advice Blog</h5>
+                            <p>Professional development articles and industry insights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Technology Stack -->
+    <div class="slide" style="background: linear-gradient(45deg, #2196F3, #21CBF3);">
+        <div class="container text-white">
+            <h1 class="display-4 text-center mb-5">Technology Stack</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="mb-4">Frontend Technologies</h3>
+                    <div class="mb-3">
+                        <span class="badge bg-white text-dark fs-6 me-2 p-2">HTML5</span>
+                        <span class="badge bg-white text-dark fs-6 me-2 p-2">CSS3</span>
+                        <span class="badge bg-white text-dark fs-6 p-2">Bootstrap 5</span>
+                    </div>
+                    <div class="mb-3">
+                        <span class="badge bg-white text-dark fs-6 me-2 p-2">JavaScript ES6+</span>
+                        <span class="badge bg-white text-dark fs-6 p-2">Font Awesome</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="mb-4">Key Features</h3>
+                    <ul class="fs-5">
+                        <li>Responsive Design</li>
+                        <li>LocalStorage Persistence</li>
+                        <li>Client-side Authentication</li>
+                        <li>Dynamic Content Loading</li>
+                        <li>Form Validation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Project Structure -->
+    <div class="slide" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h1 class="display-4 text-center mb-5" style="color: #F03737;">Project Architecture</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="mb-3">File Structure</h4>
+                    <div class="bg-dark text-light p-3 rounded" style="font-family: monospace;">
+                        <div>📁 Job-Portal/</div>
+                        <div>&nbsp;&nbsp;📁 css/ (Bootstrap + Custom)</div>
+                        <div>&nbsp;&nbsp;📁 js/ (Authentication + Features)</div>
+                        <div>&nbsp;&nbsp;📁 images/ (Assets)</div>
+                        <div>&nbsp;&nbsp;📄 index.html</div>
+                        <div>&nbsp;&nbsp;📄 login.html</div>
+                        <div>&nbsp;&nbsp;📄 dashboard.html</div>
+                        <div>&nbsp;&nbsp;📄 job.html</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Key Components</h4>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <p><strong>auth.js:</strong> User authentication system</p>
+                            <p><strong>job-database.js:</strong> Job data management</p>
+                            <p><strong>dashboard.js:</strong> User dashboard functionality</p>
+                            <p><strong>session-manager.js:</strong> Session persistence</p>
+                            <p><strong>validation.js:</strong> Form validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Conclusion -->
+    <div class="slide text-center" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+        <div class="container text-white">
+            <h1 class="display-3 mb-4">Thank You!</h1>
+            <h2 class="mb-4">My Job Gator - Complete Job Portal</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="bg-white bg-opacity-20 p-4 rounded mb-4">
+                        <h4 class="mb-3">Project Highlights</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><i class="fas fa-check me-2"></i>Complete Authentication</p>
+                                <p><i class="fas fa-check me-2"></i>Job Management System</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><i class="fas fa-check me-2"></i>User Dashboard</p>
+                                <p><i class="fas fa-check me-2"></i>Career Guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="fs-5">Ready for deployment and further enhancement</p>
+                    <div class="mt-4">
+                        <span class="badge bg-light text-dark fs-6 me-2 p-2">Responsive</span>
+                        <span class="badge bg-light text-dark fs-6 me-2 p-2">Scalable</span>
+                        <span class="badge bg-light text-dark fs-6 p-2">User-Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        });
+    </script>
+</body>
+</html>
